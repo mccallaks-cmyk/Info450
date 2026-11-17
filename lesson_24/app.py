@@ -4,7 +4,10 @@ import pandas as pd
 import plotly.express as px
 
 # Load dataset
-df = pd.read_csv("Advertising_F.csv")
+from pathlib import Path
+
+csv_path = Path(__file__).parent / "Advertising_F.csv"
+df = pd.read_csv(csv_path)
 
 # App title
 st.title("Advertising Effectiveness Dashboard")
